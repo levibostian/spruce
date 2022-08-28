@@ -1,35 +1,40 @@
-[npm]: https://www.npmjs.com/package/levibostian/npm-module-blanky
+[npm]: https://www.npmjs.com/package/levibostian/spruce
 
-Latest (recommended) [![npm latest version](https://img.shields.io/npm/v/levibostian/npm-module-blanky/latest.svg)][npm]
-Beta: [![npm beta version](https://img.shields.io/npm/v/levibostian/npm-module-blanky/beta.svg)][npm]
-Alpha: [![npm alpha version](https://img.shields.io/npm/v/levibostian/npm-module-blanky/alpha.svg)][npm]
+Latest (recommended) [![npm latest version](https://img.shields.io/npm/v/levibostian/spruce/latest.svg)][npm]
+Beta: [![npm beta version](https://img.shields.io/npm/v/levibostian/spruce/beta.svg)][npm]
+Alpha: [![npm alpha version](https://img.shields.io/npm/v/levibostian/spruce/alpha.svg)][npm]
 
-[![codecov](https://codecov.io/gh/levibostian/npm-module-blanky/branch/main/graph/badge.svg?token=XXXXXXX)](https://codecov.io/gh/levibostian/npm-module-blanky)
+[![codecov](https://codecov.io/gh/levibostian/spruce/branch/main/graph/badge.svg?token=XXXXXXX)](https://codecov.io/gh/levibostian/spruce)
 
-# npm-module-blanky
+# spruce 
 
-Opinionated boilerplate used to make and deploy npm modules.
+Easily run automations against your email inbox. 
 
 # Goals of this project
 
-- Contain configuration files to setup all tools I tend to use in my development flow.
-- Clone, rename some files, and get developing!
-- Start with zero dependencies. I try my best to keep all npm modules as slim as possible.
-- Setup with continuous delivery to npmjs.com.
-- Publish source maps and Typescript type declarations.
+- Infrequent (as much as we can) updates. We do this by being lightweight on dependencies and using dependencies that are stable. 
+- Portable. Run on GitHub Actions, your own server via cron, Docker, etc. 
+- Just as easy to setup as it is to create rules. Provide tools for users to be able to easily setup parsing rules for emails. 
 
-# Getting started
+This tool's current duties include:
+- Get emails from an IMAP email address account. 
+- Parse IMAP emails into a developer friendly format (example: JSON).
+- Run custom code against the parsed email to do whatever you want with the email. 
+- Perform an action on email after processing is complete (mark as read, move to folder, delete). 
+- Provide developer tools for each of the steps above for easy development. Provide CLI to get a data set. Provide library to run automated tests on data set against your custom code. 
 
-- Enable GitHub Actions for your repository.
-- If you have not done so already, create a GitHub account for bot purposes.
-- Add your bot account in the repository `/settings/access`.
-- Create secrets in GitHub settings:
-  - `BOT_PUSH_TOKEN` with key being a GitHub personal access token with push permission so the bot can push to the repository (the bot will be making git tags and releases on repository).
-  - `CODECOV_TOKEN` with upload token for CodeCov project to upload test coverage report to codecov.
-  - `NPM_TOKEN` token to push npm module to your npm account.
-- Edit the codecov badge at the top of this file. Find the token for the badge at `https://app.codecov.io/gh/<github-username>/<name-repo>/settings/badge`
-- Project is setup for public publishing by default. If you would like to make your module private, edit `publishConfig` in `package.json`.
-- Delete `CHANGELOG.md` to reset it.
+We try to keep this tool focused in it's vision and not be bloated with features. If you have a feature you have in mind to provide to this tool, it's recommended to [pitch the idea](https://github.com/levibostian/spruce/issues/new) to see if it fits into the vision of the project and would be accepted. 
+
+# Work in progress 
+
+This tool is a work in progress. 
+
+# Development 
+
+- `nvm use`
+- `npm install`
+- `cp .env.example .env` fill in details to hook into your IMAP server. 
+- (optional) `npm install -g ts-node` to easily run typescript files: `ts-node app/dump.ts`
 
 ## Contributors
 
@@ -40,7 +45,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/levibostian"><img src="https://avatars1.githubusercontent.com/u/2041082?v=4" width="100px;" alt=""/><br /><sub><b>Levi Bostian</b></sub></a><br /><a href="https://github.com/levibostian/npm-module-blanky/commits?author=levibostian" title="Code">💻</a> <a href="https://github.com/levibostian/npm-module-blanky/commits?author=levibostian" title="Documentation">📖</a> <a href="#maintenance-levibostian" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://github.com/levibostian"><img src="https://avatars1.githubusercontent.com/u/2041082?v=4" width="100px;" alt=""/><br /><sub><b>Levi Bostian</b></sub></a><br /><a href="https://github.com/levibostian/spruce/commits?author=levibostian" title="Code">💻</a> <a href="https://github.com/levibostian/spruce/commits?author=levibostian" title="Documentation">📖</a> <a href="#maintenance-levibostian" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 
