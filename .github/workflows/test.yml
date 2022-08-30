@@ -20,3 +20,5 @@ jobs:
         run: npm run compile 
       - name: Run tests 
         run:  npm run test && npx codecov
+      - name: Generate docs 
+        run: npm run docs 

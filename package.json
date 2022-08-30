@@ -7,7 +7,7 @@
     "format": "npx prettier --write \"{app,tests}/**/*.ts\" index.ts",
     "build": "rm -rf dist && npx tsc && find dist -type f -name '*.test.js*' -delete && find dist -type f -name '*.test.d.ts' -delete && cp package*.json dist/ && cp LICENSE dist/ && cp README.md dist/",
     "compile": "npm run build && npm publish dist/ --dry-run",
-    "docs": "rm -rf docs && npx typedoc app",
+    "docs": "rm -rf docs && npx typedoc",
     "lint": "npx eslint --fix --ext ts,js . && npx tsc --noEmit"
   },
   "bin": {
