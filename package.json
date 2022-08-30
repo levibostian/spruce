@@ -4,11 +4,14 @@
   "description": "replace me",
   "scripts": {
     "test": "npx jest",
-    "format": "npx prettier --write \"{app,tests}/**/*.ts\"",
+    "format": "npx prettier --write \"{app,tests}/**/*.ts\" index.ts",
     "build": "rm -rf dist && npx tsc && find dist -type f -name '*.test.js*' -delete && find dist -type f -name '*.test.d.ts' -delete && cp package*.json dist/ && cp LICENSE dist/ && cp README.md dist/",
     "compile": "npm run build && npm publish dist/ --dry-run",
     "docs": "rm -rf docs && npx typedoc app",
     "lint": "npx eslint --fix --ext ts,js . && npx tsc --noEmit"
+  },
+  "bin": {
+    "spruce": "./index.js"
   },
   "repository": {
     "type": "git",
@@ -62,6 +65,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "commander": "^9.4.0",
     "dotenv": "^16.0.1",
     "imap": "^0.8.19",
     "mailparser": "^3.5.0"

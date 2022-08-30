@@ -7,5 +7,5 @@
     },
     "typeRoots": ["@types", "./node_modules/@types"]
   },
-  "include": ["app/**/*", "@types/**/*"]
+  "include": ["app/**/*", "@types/**/*", "index.ts"]
 }

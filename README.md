@@ -34,7 +34,7 @@ This tool is a work in progress.
 - `nvm use`
 - `npm install`
 - `cp .env.example .env` fill in details to hook into your IMAP server. 
-- (optional) `npm install -g ts-node` to easily run typescript files: `ts-node app/dump.ts`
+- (optional) `npm install -g ts-node` to easily run typescript files: `ts-node index.ts dump --debug --output="/tmp/foo"`
 
 ## Contributors
 
