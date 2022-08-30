@@ -24,7 +24,10 @@
         "pkgRoot": "dist"
       }
     ],
-    "@semantic-release/git",
+    ["@semantic-release/git", {
+      "assets": ["docs", "package.json", "CHANGELOG.md"],
+      "message": "chore: prepare for ${nextRelease.version}\n\n${nextRelease.notes}"
+    }],
     "@semantic-release/github"
   ]
 }
