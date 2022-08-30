@@ -1,8 +1,8 @@
-[npm]: https://www.npmjs.com/package/levibostian/spruce
+[npm]: https://www.npmjs.com/package/spruce-email
 
-Latest (recommended) [![npm latest version](https://img.shields.io/npm/v/levibostian/spruce/latest.svg)][npm]
-Beta: [![npm beta version](https://img.shields.io/npm/v/levibostian/spruce/beta.svg)][npm]
-Alpha: [![npm alpha version](https://img.shields.io/npm/v/levibostian/spruce/alpha.svg)][npm]
+Latest (recommended) [![npm latest version](https://img.shields.io/npm/v/spruce-email/latest.svg)][npm]
+Beta: [![npm beta version](https://img.shields.io/npm/v/spruce-email/beta.svg)][npm]
+Alpha: [![npm alpha version](https://img.shields.io/npm/v/spruce-email/alpha.svg)][npm]
 
 [![codecov](https://codecov.io/gh/levibostian/spruce/branch/main/graph/badge.svg?token=XXXXXXX)](https://codecov.io/gh/levibostian/spruce)
 
@@ -28,6 +28,23 @@ We try to keep this tool focused in it's vision and not be bloated with features
 # Work in progress 
 
 This tool is a work in progress. 
+
+- [X] Dump parsed emails from inbox. 
+- [ ] Filter emails. 
+- [ ] Execute custom code from parsed email. 
+- [ ] Create tooling to test filters and custom code works. 
+
+# Getting started 
+
+> Note: These docs are incomplete. It's planned to be expanded as the project progresses. 
+
+There is a recommended path to using this tool: 
+
+[![](https://mermaid.ink/img/pako:eNo1j0sKAjEQRK_S9FovMAvB3wkUXJhZtJOeMZB0hk4HFPHuRhl3VfAeVL1wyJ6xw0lpvsP54GR73SuTMRRKc2TwZASFDUbNCZ65KgS55UcP6_UGdteLhgaPIRprActLBE4UYvkKMJAy0C1X653sft5-8eZYpyBfTasATRSk2OI22AmuMLG27tvKlxMAh3bnxA67Fj2PVKM5dPJuaJ3bXD76YFmxGykWXiFVy6enDNiZVv5Dh0DtdFqo9wdY7l0l)](https://mermaid-js.github.io/mermaid-live-editor/edit#pako:eNo1j0sKAjEQRK_S9FovMAvB3wkUXJhZtJOeMZB0hk4HFPHuRhl3VfAeVL1wyJ6xw0lpvsP54GR73SuTMRRKc2TwZASFDUbNCZ65KgS55UcP6_UGdteLhgaPIRprActLBE4UYvkKMJAy0C1X653sft5-8eZYpyBfTasATRSk2OI22AmuMLG27tvKlxMAh3bnxA67Fj2PVKM5dPJuaJ3bXD76YFmxGykWXiFVy6enDNiZVv5Dh0DtdFqo9wdY7l0l)
+
+First, create yourself a sample data set. That is, save some example emails to a file that you can use to configure this tool and for automated tests if you choose to do that. 
+
+...more docs coming soon...
 
 # Development 
 
